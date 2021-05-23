@@ -1,14 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <Title>IP Info</Title>
+        <Authors>Jan Ruhlaender</Authors>
+        <Copyright>© Jan Ruhlaender. All rights reserved.</Copyright>
+        <Description>Lists the IP addresses of your network interfaces.</Description>
+        <PackageId>cap.ipinfo</PackageId>
         <OutputType>Exe</OutputType>
         <TargetFramework>net5.0</TargetFramework>
         <RootNamespace>IpInfo</RootNamespace>
         <Nullable>enable</Nullable>
+		<PackAsTool>true</PackAsTool>
+        <PackageIcon>icon.png</PackageIcon>
+		<ToolCommandName>ipinfo</ToolCommandName>
+		<PackageOutputPath>./nupkg</PackageOutputPath>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Cap.Core" Version="6.1.0" />
+        <None Include="images\icon.png" Pack="true" PackagePath="\"/>
+        <PackageReference Include="Cap.Core" Version="6.1.0" />
     </ItemGroup>
 
 </Project>
