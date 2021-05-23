@@ -17,7 +17,7 @@ namespace IpInfo.Extensions
                         Ipv6 = ipv6 ?? ""
                     });
                 }
-        
+
                 public static void AddRange(this IList<NetworkIpInfo> list, IEnumerable<NetworkInterface> values)
                 {
                     foreach (var item in values)
@@ -30,7 +30,7 @@ namespace IpInfo.Extensions
                         list.Add(name, ipv4, ipv6);
                     }
                 }
-        
+
                 public static void WriteTable(this IList<NetworkIpInfo> list, TextWriter writer, bool showIpv6)
                 {
                     var col1Len = list.Select(i => i.Ipv4.Length).Max();
@@ -38,18 +38,19 @@ namespace IpInfo.Extensions
                     var indent = new string(' ', 4);
                     foreach (var entry in list)
                     {
-                        var col1 = entry.Ipv4.PadRight(col1Len);
-                        var col2 = entry.Ipv6.PadRight(col2Len);
+                        if (!showIpv6 && string.IsNullOrWhiteSpace(entry.Ipv4)) continue;
+                        var ipv4Column = entry.Ipv4.PadRight(col1Len);
+
                         writer.Write(indent);
+                        writer.Write(ipv4Column);
+                        writer.Write(" ");
                         if (showIpv6)
                         {
-                            writer.WriteLine($"{col1}  {col2}  {entry.Name}");
+                            var ipv6Column = entry.Ipv6.PadRight(col2Len);
+                            writer.Write(ipv6Column);
+                            writer.Write(" ");
                         }
-                        else
-                        {
-                            if (string.IsNullOrWhiteSpace(entry.Ipv4)) continue;
-                            writer.WriteLine($"{col1}  {entry.Name}");
-                        }
+                        writer.WriteLine(entry.Name);
                     }
                 }
     }
