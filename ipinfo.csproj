@@ -15,10 +15,11 @@
 		<ToolCommandName>ipinfo</ToolCommandName>
 		<PackageOutputPath>./nupkg</PackageOutputPath>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageVersion>1.0.1</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="images\icon.png" Pack="true" PackagePath="\"/>
+        <None Include="images\icon.png" Pack="true" PackagePath="\" />
         <PackageReference Include="Cap.Core" Version="6.1.0" />
     </ItemGroup>
 
