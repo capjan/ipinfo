@@ -2,7 +2,6 @@
 
 ipinfo.exe lists known ip addresses for your computer.
 
-
 ## My Reasons for ipinfo
 
 1. I don't like to think about whether I have to type `ifconfig` (OS X and Linux) or `ipconfig` (Windows) into the console to see the local IP address for my machine.
@@ -38,3 +37,6 @@ Options:
   -v, --version              show version information and exit
 ```
 
+## Remarks:
+
+- This tool depends on a core library called [CoreLib](https://github.com/capjan/CoreLib) (cap.core)
