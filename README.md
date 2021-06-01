@@ -1,5 +1,7 @@
 # ipinfo
 
+[![.NET 5.0](https://github.com/capjan/ipinfo/actions/workflows/dotnet.yml/badge.svg)](https://github.com/capjan/ipinfo/actions/workflows/dotnet.yml)
+
 ipinfo.exe lists known ip addresses for your computer.
 
 ## My Reasons for ipinfo
