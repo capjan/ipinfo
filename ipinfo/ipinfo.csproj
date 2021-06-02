@@ -13,7 +13,6 @@
 		<PackAsTool>true</PackAsTool>
         <PackageIcon>icon.png</PackageIcon>
 		<ToolCommandName>ipinfo</ToolCommandName>
-		<PackageOutputPath>./nupkg</PackageOutputPath>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageVersion>1.0.1</PackageVersion>
     </PropertyGroup>
