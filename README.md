@@ -2,7 +2,14 @@
 
 [![.NET 5.0](https://github.com/capjan/ipinfo/actions/workflows/dotnet.yml/badge.svg)](https://github.com/capjan/ipinfo/actions/workflows/dotnet.yml)
 
-ipinfo.exe lists known ip addresses for your computer.
+ipinfo lists known ip addresses for your computer.
+
+## Installation
+
+ipinfo is a command line tool that can be installed as [.NET tool](https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools)
+```bash
+dotnet tool install --global cap.ipinfo
+```
 
 ## My Reasons for ipinfo
 
